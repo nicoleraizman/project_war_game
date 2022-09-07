@@ -3,7 +3,7 @@ from Deck_of_cards import DeckOfCards
 
 
 class CardGame:
-    """start a game"""
+    """start a game."""
     def __init__(self,name_player1, name_player2, num_cards=26):
         self.d = DeckOfCards()
         if num_cards > 26 or num_cards < 10:

@@ -27,7 +27,7 @@ class Card:
         return f"{self.suit}-{self.value}"
 
     """checking which value high then other and if they equal
-        he checking which suit high then other"""
+        he checking which suit high then other."""
     def __gt__(self, other):
         if isinstance(other, Card):
             if self.cards_value[self.value] > other.cards_value[self.value]:

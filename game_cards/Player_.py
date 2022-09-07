@@ -3,7 +3,7 @@ from Card import Card
 import random
 
 class Player:
-    """this function creating a player"""
+    """this function creating a player."""
     def __init__(self, name, num_cards=26):
         self.name = name
         self.num_cards = num_cards
