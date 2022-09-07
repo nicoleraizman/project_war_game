@@ -6,6 +6,8 @@ class Player:
     """this function creating a player."""
     def __init__(self, name, num_cards=26):
         self.name = name
+        if num_cards > 26 or num_cards < 10:
+            num_cards = 26
         self.num_cards = num_cards
         self.stack_cards = []
 
@@ -16,6 +18,7 @@ class Player:
         for i in range(self.num_cards):
             random_card = deck_of_cards.deal_one()
             self.stack_cards.append(random_card)
+
 
     """get a random card from the player stack"""
     def get_card(self):

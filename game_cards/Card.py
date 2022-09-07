@@ -53,6 +53,8 @@ class Card:
             raise TypeError('it must be class Card')
 
 
+
+
 # c = Card('Diamond',11)
 # print(c.cards_value['Jack'])
 # print(c.cards_suit['Diamond'])
