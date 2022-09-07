@@ -2,8 +2,8 @@ from Card import Card
 import random
 
 class DeckOfCards:
+    # 52 different cards are created here, and are all in one stack. the stack is of type list.
     def __init__(self):
-
         list_cards = []
         suits = ["Diamond","Spade","Heart","Club"]
         for suit in suits:
@@ -12,10 +12,11 @@ class DeckOfCards:
                 list_cards.append(c)
         self.list_cards = list_cards
 
-
+    # this function takes the stack and mixes it
     def cards_shuffle(self):
         random.shuffle(self.list_cards)
 
+    # this function takes and removes a random card from the stack. It also returns the card.
     def deal_one(self):
         if len(self.list_cards) == 0:
             raise ValueError("no more cards")

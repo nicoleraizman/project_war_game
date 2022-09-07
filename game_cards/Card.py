@@ -50,13 +50,13 @@ class Card:
             raise TypeError('it must be class Card')
 
 
-c = Card('Diamond',11)
-print(c.cards_value['Jack'])
-print(c.cards_suit['Diamond'])
-c1 = Card('Spade',11)
-print(c1.cards_suit['Spade'])
-print(c1.cards_value['Jack'])
-if c1 > c:
-    print('eee')
-else:
-    print('ttt')
+# c = Card('Diamond',11)
+# print(c.cards_value['Jack'])
+# print(c.cards_suit['Diamond'])
+# c1 = Card('Spade',11)
+# print(c1.cards_suit['Spade'])
+# print(c1.cards_value['Jack'])
+# if c1 > c:
+#     print('eee')
+# else:
+#     print('ttt')

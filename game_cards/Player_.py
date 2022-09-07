@@ -9,7 +9,6 @@ class Player:
         self.stack_cards = []
 
     def set_hand(self, d:DeckOfCards):
-        d = DeckOfCards()
         for i in range(self.num_cards):
             random_card = d.deal_one()
             self.stack_cards.append(random_card)
@@ -19,6 +18,6 @@ class Player:
         self.stack_cards.remove(card_from_stack)
         return card_from_stack
 
-    def add_card(self, c:Card):
-        c = Card(self.suit, self.value)
-        self.stack_cards.append(c)
+    def add_card(self, d:DeckOfCards):
+        random_card = random.choice(d.list_cards)
+        self.stack_cards.append(random_card)
