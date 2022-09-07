@@ -20,5 +20,5 @@ class Player:
         return card_from_stack
 
     def add_card(self, c:Card):
-        c = Card(value , suit)
+        c = Card(self.suit, self.value)
         self.stack_cards.append(c)
