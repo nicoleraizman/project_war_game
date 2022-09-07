@@ -23,6 +23,9 @@ class Card:
         self.value = value
         self.cards_value = {2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 8:8, 9:9, 10:10, 'Jack':11, 'Queen':12, 'King':13, 'Ace':14}
 
+    def __repr__(self):
+        return f"{self.suit}-{self.value}"
+
     """checking which value high then other and if they equal
         he checking which suit high then other"""
     def __gt__(self, other):
