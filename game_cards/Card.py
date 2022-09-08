@@ -6,12 +6,18 @@ class Card:
         if type(suit) != str:
             raise TypeError('invalid type of suit,must be str')
         # Check type of value
-        if type(value) != int and type(value) != str:
-            raise TypeError('invalid type of value,must be int or str')
+        if type(value) != int:
+            raise TypeError('invalid type of value,must be int')
+        # check that value is in range 1-13
+        if value > 13 or value < 1:
+            raise ValueError('invalid value,value must be between 1-13')
+        # check that suit is only Dimond, Spade, Heart, or Club
+        if suit != 'Diamond' and suit != 'Spade' and suit != 'Heart' and suit != 'Club':
+            raise ValueError('invalid suit,suit must be Diamond or Spade or Heart or Club ')
 
         self.suit = suit
         self.cards_suit = {'Diamond':1, 'Spade':2, 'Heart':3, 'Club':4}
-
+        # special occasions
         if value == 11:
             value = 'Jack'
         if value == 12:
@@ -52,16 +58,3 @@ class Card:
         else:
             raise TypeError('it must be class Card')
 
-
-
-
-# c = Card('Diamond',11)
-# print(c.cards_value['Jack'])
-# print(c.cards_suit['Diamond'])
-# c1 = Card('Spade',11)
-# print(c1.cards_suit['Spade'])
-# print(c1.cards_value['Jack'])
-# if c1 > c:
-#     print('eee')
-# else:
-#     print('ttt')
