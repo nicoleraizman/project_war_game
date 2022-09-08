@@ -16,8 +16,9 @@ class DeckOfCards:
     def cards_shuffle(self):
         random.shuffle(self.list_cards)
 
-    """this function takes and removes a random card from the stack. It also returns the card.."""
+    """this function takes and removes a random card from the stack. """
     def deal_one(self):
+        """makes sure that the list is not empty. If there are no cards, a massage will appear """
         if len(self.list_cards) == 0:
             raise ValueError("no more cards")
 
