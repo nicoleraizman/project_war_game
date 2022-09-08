@@ -30,10 +30,10 @@ class Card:
         he checking which suit high then other."""
     def __gt__(self, other):
         if isinstance(other, Card):
-            if self.cards_value[self.value] > other.cards_value[self.value]:
+            if self.cards_value[self.value] > other.cards_value[other.value]:
                 return True
-            elif self.cards_value[self.value] == other.cards_value[self.value]:
-                if self.cards_suit[self.suit] > other.cards_suit[self.suit]:
+            elif self.cards_value[self.value] == other.cards_value[other.value]:
+                if self.cards_suit[self.suit] > other.cards_suit[other.suit]:
                     return True
                 else:
                     return False
@@ -45,7 +45,7 @@ class Card:
     """checking which if the value is equal"""
     def __eq__(self, other):
         if isinstance(other, Card):
-            if self.cards_value[self.value] == other.cards_value[self.value]:
+            if self.cards_value[self.value] == self.cards_value[other.value] and self.cards_suit[self.suit] == self.cards_suit[other.suit]:
                 return True
             else:
                 return False

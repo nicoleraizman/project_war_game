@@ -31,3 +31,5 @@ class CardGame:
             return self.player2
 
 
+    def __str__(self):
+        return f" stack cards of player1: {self.player1.stack_cards} stack cards of player2:{self.player2.stack_cards} "

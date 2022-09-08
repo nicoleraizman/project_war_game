@@ -20,6 +20,7 @@ class Player:
             self.stack_cards.append(random_card)
 
 
+
     """get a random card from the player stack"""
     def get_card(self):
         card_from_stack = random.choice(self.stack_cards)
