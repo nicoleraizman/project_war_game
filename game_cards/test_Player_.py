@@ -1,5 +1,4 @@
-from unittest import TestCase,mock
-from unittest import TestCase
+from unittest import TestCase, mock
 from Card import Card
 from Player_ import Player
 from Deck_of_cards import DeckOfCards

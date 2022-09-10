@@ -1,5 +1,4 @@
 from unittest import TestCase
-from unittest.mock import patch
 from Deck_of_cards import DeckOfCards
 from Card import Card
 
@@ -25,9 +24,11 @@ class TestDeckOfCards(TestCase):
     def test_cards_shuffle(self):
         deck_of_cards1 = DeckOfCards()
         deck_of_cards2 = DeckOfCards()
+        self.assertEqual(deck_of_cards2.list_cards, deck_of_cards1.list_cards)
         deck_of_cards1.cards_shuffle()
-        self.assertNotEqual(deck_of_cards2,deck_of_cards1)
+        self.assertNotEqual(deck_of_cards2.list_cards,deck_of_cards1.list_cards)
         self.assertIn(self.card1,deck_of_cards1.list_cards)
+        self.assertIn(self.card1,deck_of_cards2.list_cards)
 
     """a message will appear if there are no cards in the deck  """
     def test_deal_one_valid1(self):

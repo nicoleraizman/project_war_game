@@ -24,7 +24,7 @@ class CardGame:
     def new_game(self):
         # checks that the function new_game works only in init
         if self.new_game_is_work:
-            raise Exception('new_game cant use only in init')
+            raise Exception('new_game can use only in init')
         self.dack_of_card.cards_shuffle()
         self.player1.set_hand(self.dack_of_card)
         self.player2.set_hand(self.dack_of_card)

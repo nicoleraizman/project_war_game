@@ -3,7 +3,7 @@ from Card import Card
 import random
 
 class Player:
-    """this function creats a player."""
+    """this function creates a player."""
     def __init__(self, name:str, num_cards=26):
         if type(num_cards)!=int:
             raise TypeError("number of cards has to be of type int!!!")
@@ -16,7 +16,7 @@ class Player:
     def __repr__(self):
         return f"{self.name}"
 
-    """a function that gives the players cards from the stack, according to how many cards they need to get """
+    """a function that gives the players cards from the deck, according to how many cards they need to get """
     def set_hand(self, deck_of_cards:DeckOfCards):
         for i in range(self.num_cards):
             random_card = deck_of_cards.deal_one()
